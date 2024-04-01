@@ -82,7 +82,7 @@ function TaskList() {
 
       {/* List of todo items */}
       <ul>
-        {todoList?.todos.map((todo, idx) => (
+        {todoList?.todos?.map((todo, idx) => (
           <li key={idx}>
             {/* Display completed or not completed task */}
             <div
