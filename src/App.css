@@ -187,17 +187,29 @@ h1{
 }
 
 .change-input{
-  display: flex;
-  flex-direction: row;
+  align-items: center;
+  text-align: center;
 }
 
 .change-input input{
   padding: 10px;
   border: 1px solid gray;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
   outline: none;
+  
 
+}
+
+@media(max-width : 768px){
+  .change-input input{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    outline: none;
+    width: 50%;
+    
+  
+  }
 }
 
 .change-input button{
@@ -207,9 +219,9 @@ h1{
  color: white;
  font-weight: 500;
  font-size: 20px;
- border-top-right-radius: 10px;
- border-bottom-right-radius: 10px;
+ border-radius: 10px;
  cursor: pointer;
+ margin-top: 10px;
 
 }
 

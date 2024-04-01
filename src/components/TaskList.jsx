@@ -85,12 +85,13 @@ function TaskList() {
         {todoList?.todos?.map((todo, idx) => (
           <li key={idx}>
             {/* Display completed or not completed task */}
-            <div
+          <div
               className={`${
                 todo.isCompleted ? "task-complete" : "task-not-complete"
               }`}
               onClick={() => handleComplete(idx)}
             ></div>
+            
             {/* Display todo item text or input field for editing */}
             <div className="todoList-text">
               {change && todoToChange === idx ? (
@@ -110,10 +111,12 @@ function TaskList() {
               )}
             </div>
             {/* Delete and Edit icons */}
-            <div className="icons">
-              <MdDelete onClick={() => handleDelete(todo.id)} />
-              <FaPen onClick={() => handleEdit(todo.text, idx)} />
-            </div>
+        
+    <div className="icons">
+      <MdDelete onClick={() => handleDelete(todo.id)} />
+      <FaPen onClick={() => handleEdit(todo.text, idx)} />
+    </div>
+
           </li>
         ))}
       </ul>
