@@ -59,7 +59,7 @@ function TaskList() {
     <div className="todo-list">
       {/* Reset Todo button */}
       <div className="reset-todo">
-        {todoList?.todos.length > 0 && (
+        {todoList?.todos?.length > 0 && (
           <IoReload size={"20px"} onClick={handleReset} />
         )}
         {todoList?.todos?.length === 0 && (
