@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-section {
+  background: linear-gradient(135deg, #4e80f3ae, #ac88ffb2), url(https://cdn-icons-png.flaticon.com/128/3176/3176366.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+
+.inner-section {
+  min-height: 400px;
+  width: 50%;
+}
+
+h1{
   color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+@media(max-width : 768px){
+  h1{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+
+  .inner-section {
+    min-height: 400px;
+    width: 90%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.first-time-container > h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
 }
+
+
+.first-time-container input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.first-time-container button {
+  padding: 12px 20px;
+  background-color: #4e80f3;
+  color: white;
+  font-weight: 500;
+  font-size: 18px; /* Adjust font size as needed */
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.first-time-container button:hover {
+  background-color: #3666d8; /* Darker shade on hover */
+}
+
+
+
+
+
+.add-task > .input-field {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+}
+
+.input-field input {
+  background-color: transparent;
+  width: 90%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
+  margin: 0 5;
+  padding-left: 10px;
+}
+
+.input-field button {
+  width: max-content;
+  padding: 2px;
+  width: 10%;
+  align-items: center;
+  vertical-align: middle;
+  background-color: white;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.reset-todo{
+  text-align: end;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.todo-list {
+  background-color: white;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.todo-list li {
+  font-size: 20px;
+  color: black;
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 0 10;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+
+
+.task-not-complete {
+  height: 20px;
+  width: 20px;
+  border: 3px solid black;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-complete {
+  height: 25px;
+  width: 25px;
+  background: url(https://cdn-icons-png.flaticon.com/128/6785/6785304.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todoList-text {
+  flex-grow: 1;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons > * {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.edit-modal {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  border: 2px solid black;
+}
+
+.change-input{
+  display: flex;
+  flex-direction: row;
+}
+
+.change-input input{
+  padding: 10px;
+  border: 1px solid gray;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+
+}
+
+.change-input button{
+  padding: 10px;
+  border: 1px solid gray;
+ background-color: #4e80f3;
+ color: white;
+ font-weight: 500;
+ font-size: 20px;
+ border-top-right-radius: 10px;
+ border-bottom-right-radius: 10px;
+ cursor: pointer;
+
+}
+
+
